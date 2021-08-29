@@ -1,5 +1,5 @@
 {
-    "name": "logger",
+    "name": "@moaufmklo/logger",
     "version": "1.0.0",
     "description": "Dependency-free Node.js module for simple, rotating, file-based logging",
     "main": "index.js",
