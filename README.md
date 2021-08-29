@@ -40,7 +40,7 @@ logger.log("error", "An error log.");
 
 ## Links
 
-- [npm](https://www.npmjs.com/package/@moaufmklo)
+- [npm](https://www.npmjs.com/package/@moaufmklo/logger)
 - [GitHub](https://github.com/MoaufmKlo/logger)
 
 ## Contributing
