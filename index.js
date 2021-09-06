@@ -32,7 +32,7 @@ class Logger {
 
         // Date- and time-related variables
         const date = new Date();
-        const fileName = `${("0" + date.getUTCFullYear()).slice(-2)}-${("0" + date.getUTCMonth()).slice(-2)}-${("0" + date.getUTCDate()).slice(-2)}`;
+        const fileName = `${("0" + date.getUTCFullYear()).slice(-2)}-${("0" + (date.getUTCMonth() + 1)).slice(-2)}-${("0" + date.getUTCDate()).slice(-2)}`;
         const timestamp = `${("0" + date.getUTCHours()).slice(-2)}:${("0" + date.getUTCMinutes()).slice(-2)}:${("0" + date.getUTCSeconds()).slice(-2)}`;
 
         fs.appendFileSync(`${this.logsPath}${fileName}.log`, `[${timestamp}] [${type.toUpperCase()}]: ${message}\n`);
