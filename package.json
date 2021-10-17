@@ -27,8 +27,5 @@
     "bugs": {
         "url": "https://github.com/MoaufmKlo/log/issues"
     },
-    "homepage": "https://github.com/MoaufmKlo/log#readme",
-    "dependencies": {
-        "chalk": "^4.1.2"
-    }
+    "homepage": "https://github.com/MoaufmKlo/log#readme"
 }
