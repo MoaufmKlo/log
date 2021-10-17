@@ -1,5 +1,14 @@
 const fs = require("fs");
-const chalk = require("chalk");
+
+const format = (startCode, endCode) => string => `\u001B[${startCode}m${string}\u001B[${endCode}m`;
+const color = {
+    "green": format(32, 39),
+    "red": format(31, 39),
+    "yellow": format(33, 39),
+    "gray": format(90, 39),
+    "reset": format(0, 0),
+    "bold": format(1, 22)
+};
 
 class Logger {
     /**
@@ -43,8 +52,8 @@ class Logger {
 
         // Log to stdout (console) if applicable
         if (this.logToStdout) {
-            const theme = (type === "info") ? chalk.bold.green : (type === "error") ? chalk.bold.red : (type === "warn") ? chalk.bold.yellow : chalk.reset;
-            console.log(`[${chalk.gray(timestamp)}] ${theme(`[${type.toUpperCase()}]`)}: ${message}`)
+            const theme = (type === "info") ? color.green : (type === "error") ? color.red : (type === "warn") ? color.yellow : color.reset;
+            console.log(`[${color.gray(timestamp)}] ${color.bold(theme(`[${type.toUpperCase()}]`))}: ${message}`);
         };
     };
 };
